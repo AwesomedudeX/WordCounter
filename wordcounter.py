@@ -10,4 +10,7 @@ for i in range(len(uin.split(" "))):
 		uout += 1
 
 if uin != "":
-	st.write(f"This message is {uout} words long.")
+	if uout == 1:
+		st.write(f"This message is {uout} word long.")
+	else:
+		st.write(f"This message is {uout} words long.")
