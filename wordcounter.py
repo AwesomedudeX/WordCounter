@@ -8,7 +8,7 @@ uout = 0
 for i in range(len(uin)):
 	if uin[i] not in [":", ";", ".", ",", "-", "+", "*"]:
 		ulst = list(uin[i])
-		ulst.pop(" ")
+		ulst.remove(" ")
 		uin[i] = ulst
 		
 if uin != "":
