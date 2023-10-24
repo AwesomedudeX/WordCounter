@@ -2,7 +2,11 @@ import streamlit as st
 
 st.title("Word Counter")
 
-uin = st.text_input("Enter text here:").split(" ")
+uin = st.text_input("Enter text here:")
+
+if uin != "":
+	uin = uin.split(" ")
+
 uout = 0
 
 for i in range(len(uin)):
@@ -16,7 +20,7 @@ for i in range(len(uin)):
 		if uin[i] != []:
 			uout += 1
 		
-if uin != [""]:
+if uin != "":
 	if uout == 1:
 		st.write(f"This message is {uout} word long.")
 	elif uout == 0:
