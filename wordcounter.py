@@ -6,7 +6,7 @@ uin = st.text_input("Enter text here:")
 uout = 0
 
 for i in range(len(uin.split(" "))):
-	if uin.split(" ")[i] != "-" and uin.split(" ")[i] != ".":
+	if uin.split(" ")[i] != "-" and uin.split(" ")[i] != "." and " " not in uin.split(" ")[i]:
 		uout += 1
 
 if uin != "":
