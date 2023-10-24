@@ -16,8 +16,10 @@ for i in range(len(uin)):
 		if uin[i] != []:
 			uout += 1
 		
-if uin != "":
+if uin != []:
 	if uout == 1:
 		st.write(f"This message is {uout} word long.")
+	elif uout == 0:
+		st.write("Please enter a valid message.")
 	else:
 		st.write(f"This message is {uout} words long.")
