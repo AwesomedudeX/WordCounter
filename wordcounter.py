@@ -7,9 +7,14 @@ uout = 0
 
 for i in range(len(uin)):
 	if uin[i] not in [":", ";", ".", ",", "-", "+", "*"]:
-		ulst = list(uin[i])
-		ulst.remove(" ")
+		ulst = []
+		for x in uin[i]:
+			if x != " ":
+				ulst.append(x)
 		uin[i] = ulst
+
+		if uin[i] != []:
+			uout += 1
 		
 if uin != "":
 	if uout == 1:
