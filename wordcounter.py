@@ -7,18 +7,21 @@ uin = st.text_input("Enter text here:")
 if uin != "":
 	uin = uin.split(" ")
 
+if "\\" in uin:
+	for i in range(len(uin)):
+
+		for x in range(len(uin[i])):
+		
+			uin[i] = list(uin[i])
+			if uin[i][x] == "\\":
+				uin[i][x] = " "
+			"".join(uin[i])
+
 uout = 0
 
 ulst = []
 
 for i in range(len(uin)):
-
-	for x in range(len(uin[i])):
-		
-		uin[i] = list(uin[i])
-		if uin[i][x] == "\\":
-			uin[i][x] = " "
-		"".join(uin[i])
 	
 	if uin[i] not in [":", ";", ".", ",", "-", "+", "*", "!", "?", "/"]:
 		for x in uin[i]:
