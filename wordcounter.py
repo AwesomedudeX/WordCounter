@@ -9,12 +9,14 @@ if uin != "":
 
 uout = 0
 
-for i in range(len(uin)):		
+for i in range(len(uin)):
+	
+	ulst = []
+	for x in uin[i]:
+		if x == "\\":
+			uin[i] = " "
+
 	if uin[i] not in [":", ";", ".", ",", "-", "+", "*", "!", "?", "/"]:
-		ulst = []
-		for x in uin[i]:
-			if x == "\\":
-				uin[i] = " "
 		for y in uin[i]:
 			if y != " ":
 				ulst.append(x)
