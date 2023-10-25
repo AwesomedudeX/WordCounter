@@ -5,7 +5,7 @@ st.title("Word Counter")
 uin = st.text_input("Enter text here:")
 
 if uin != "":
-	uin = uin.split(" ")
+	uin = uin.split(" ", "\\")
 
 uout = 0
 
