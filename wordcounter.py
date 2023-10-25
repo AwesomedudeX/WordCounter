@@ -5,12 +5,12 @@ st.title("Word Counter")
 uin = st.text_input("Enter text here:")
 
 if uin != "":
-	uin = uin.split(" ", "\\")
+	uin = uin.split(" ")
 
 uout = 0
 
 for i in range(len(uin)):
-	if uin[i] not in [":", ";", ".", ",", "-", "+", "*", "!", "?", "/"]:
+	if uin[i] not in [":", ";", ".", ",", "-", "+", "*", "!", "?", "/", "\\"]:
 		ulst = []
 		for x in uin[i]:
 			if x != " ":
