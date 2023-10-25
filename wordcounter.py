@@ -10,12 +10,12 @@ if uin != "":
 uout = 0
 
 ulst = []
-for x in uin[i]:
-	if x == "\\":
-		uin[i] = " "
-
 
 for i in range(len(uin)):
+
+	for x in range(len(uin[i])):
+		if uin[i][x] == "\\":
+			uin[i][x] = " "
 	
 	if uin[i] not in [":", ";", ".", ",", "-", "+", "*", "!", "?", "/"]:
 		for x in uin[i]:
